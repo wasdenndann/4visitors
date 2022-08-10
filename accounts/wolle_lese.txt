@@ -1,0 +1,17 @@
+A small script to read the csv-files from DKB (Deutsche Kreditbank), as our accounts are there.
+The transactions of accounts are downloadable as csv-file; for VisaCard, giro account or depot.
+
+Those files will be read and written to a database for easy handling. So you can search for whatever you want.
+
+The structure of  the needed database is in the sql-file. In the table  'owner' the entries must be adapted to own accounts (only last four digits of account number).
+
+I know only the structure from DKB which is like:
+"Kontonummer:";"DEXXXXXXXXXXXXXXXXX / Mein Konto";
+
+"Von:";"02.02.2022";
+"Bis:";"03.04.2022";
+"Kontostand vom 03.04.2022:";"XXX,XX EUR";
+
+"Buchungstag";"Wertstellung";"Buchungstext";"Auftraggeber / Begünstigter";"Verwendungszweck";"Kontonummer";"BLZ";"Betrag (EUR)";"Gläubiger-ID";"Mandatsreferenz";"Kundenreferenz";
+
+for the giro account
